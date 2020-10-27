@@ -1,0 +1,19 @@
+{
+  "name": "protractornodeapp",
+  "version": "1.0.0",
+  "description": "This is a sample nodejs app to fire up docker when a post request is received",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Hello\""
+  },
+  "keywords": [
+    "Protractor",
+    "docker"
+  ],
+  "author": "Sridhar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}

@@ -14,6 +14,11 @@ app.get("/results", (req, res, next) => {
     res.json("Application is up");
    });
 
+app.get('/scripts', jsonParser, function(req, res){
+  res.json(fs.readdirSync('../../AutomationDemo/Specs/', {withFileTypes: true})
+  .filter(item => !item.isDirectory())
+  .map(item => item.name));
+});
 
   app.post('/protractor/scripts', jsonParser, function (req, res) {
     // var files = fs.readdirSync('/assets/photos/');

@@ -11,9 +11,10 @@ app.listen(3000, () => {
  console.log("Server running on port 3000");
 });
 
-app.get("/results", (req, res, next) => {
-	res.sendFile('/home/ubuntu/sample/target/screenshots/htmlReport.html');
- // res.json("Application is up");
+app.get("/results/:id", (req, res, next) => {
+	console.log(req.params.id);
+	res.sendFile('/home/ubuntu/AutomationDemo/reports/'+req.params.id+'_Index.html');
+
    });
 
 app.get('/scripts', jsonParser, function(req, res){
@@ -23,7 +24,6 @@ app.get('/scripts', jsonParser, function(req, res){
 });
 
   app.post('/protractor/scripts', jsonParser, function (req, res) {
-    // var files = fs.readdirSync('/assets/photos/');
 
     if(req.body.scriptName !== undefined && req.body.scriptName !== null && req.body.scriptName !== ""){
         console.log(req.body.scriptName);

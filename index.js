@@ -2,6 +2,7 @@ var fs = require('fs');
 var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
+var path = require('path');
 
 // create application/json parser
 var jsonParser = bodyParser.json()
@@ -11,7 +12,8 @@ app.listen(3000, () => {
 });
 
 app.get("/results", (req, res, next) => {
-    res.json("Application is up");
+	res.sendFile('/home/ubuntu/sample/target/screenshots/htmlReport.html');
+ // res.json("Application is up");
    });
 
 app.get('/scripts', jsonParser, function(req, res){

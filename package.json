@@ -4,7 +4,7 @@
   "description": "This is a sample nodejs app to fire up docker when a post request is received",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Hello\""
+    "test": "echo \"Helloo\""
   },
   "keywords": [
     "Protractor",
